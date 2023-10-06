@@ -8,7 +8,7 @@ int removeElement(int* nums, int numsSize, int val);
 int main()
 {
     int nums[100],numsSize,val,i;
-    printf("Enter the size of array: asdadadasd");
+    printf("Enter the size of array: ");
     scanf("%d",&numsSize);
     printf("Enter the elements of array: ");
     for(i=0;i<numsSize;i++)
