@@ -44,9 +44,9 @@ int majorityElement(int* nums, int numsSize)
             }
         }
         if(count>numsSize/2)
-            return sol;
+            return count;
         else
-            return -1;
+            return printf("No majority element");
     }
 
 }
