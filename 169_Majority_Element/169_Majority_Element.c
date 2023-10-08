@@ -2,6 +2,7 @@
 169.Majority Element:
 Given an array nums of size n, return the majority element.
 */
+
 #include<stdio.h>
 int majorityElement(int* nums, int numsSize);
 int main()
