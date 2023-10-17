@@ -28,8 +28,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/bobby/Desktop/LeetCode/55_Jump_Game",
-      "program": "c:/Users/bobby/Desktop/LeetCode/55_Jump_Game/build/Debug/outDebug",
+      "cwd": "c:/Users/bobby/Desktop/LeetCode/45_Jump_Game_2",
+      "program": "c:/Users/bobby/Desktop/LeetCode/45_Jump_Game_2/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
