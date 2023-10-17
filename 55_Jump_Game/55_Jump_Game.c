@@ -10,7 +10,7 @@ bool canJump(int* nums, int numsSize);
 int main()
 {
     int nums[100],numsSize,i;
-    printf("Enter the size of array: ");
+    printf("Enter the size of array: "); //taking input from user
     scanf("%d",&numsSize);
     printf("Enter the elements of array: ");
     for(i=0;i<numsSize;i++)
@@ -29,13 +29,19 @@ int main()
     return 0;
 }
 bool canJump(int* nums, int numsSize){
-    int max=0;
+    int max=0; //for storing the maximum jump
+
     for(int i=0;i<numsSize;i++){
-        if(i>max){
+    
+        if(i>max){ //if the index is greater than the maximum jump then return false
             return false;
         }
-        if(i+nums[i]>max){
+    
+        if(i+nums[i]>max){ //if the index plus the element is greater than the maximum jump then update the maximum jump
             max=i+nums[i];
         }
     }
 }
+
+//Time Complexity: O(n)
+//Space Complexity: O(1)
