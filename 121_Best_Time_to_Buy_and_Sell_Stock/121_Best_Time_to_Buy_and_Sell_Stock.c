@@ -11,7 +11,7 @@ int maxProfit(int* prices, int pricesSize);
 int main()
 {
     int prices[100],pricesSize,i;
-    printf("Enter the size of array: ");
+    printf("Enter the size of array: "); //taking input from user
     scanf("%d",&pricesSize);
     printf("Enter the elements of array: ");
     for(i=0;i<pricesSize;i++)
@@ -25,19 +25,29 @@ int main()
 
 int maxProfit(int* prices, int pricesSize){
         int maxprice=0,minprice;
-        minprice=prices[0];
+
+        minprice=prices[0]; //storing the first element of the array in minprice
+        
         for(int i=0;i<pricesSize;i++){
-            if(prices[i] < minprice){
-                minprice=prices[i];
+
+            if(prices[i] < minprice){  //if the element is less than the minprice then update the minprice
+                
+                minprice=prices[i]; //storing the element in minprice
+            
             }
             else{
-                   if(prices[i]-minprice > maxprice){
-                       maxprice=prices[i]-minprice;
+                  
+                   if(prices[i]-minprice > maxprice){ //if the element minus the minprice is greater than the maxprice then update the maxprice
+                  
+                       maxprice=prices[i]-minprice; //storing the element minus the minprice in maxprice
+                  
                    }
             }
         }
         if(maxprice==0){
-            return 0;
+            
+            return 0; //if the maxprice is 0 then return 0
+        
         }
         else{
             return maxprice;

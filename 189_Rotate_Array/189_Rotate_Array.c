@@ -92,7 +92,7 @@ void reverse(int* nums, int start, int end);
 int main()
 {
     int nums[100],numsSize,i,k;
-    printf("Enter the size of array: ");
+    printf("Enter the size of array: "); //taking input from user
     scanf("%d",&numsSize);
     printf("Enter the elements of array: ");
     for(i=0;i<numsSize;i++)
@@ -109,21 +109,23 @@ int main()
     }
     return 0;
 }
-void rotate(int* nums, int numsSize, int k)
+void rotate(int* nums, int numsSize, int k) //using reverse function
 {
-    k=k%numsSize;
+    k=k%numsSize; 
     reverse(nums,0,numsSize-1);
     reverse(nums,0,k-1);
     reverse(nums,k,numsSize-1);
 }
-void reverse(int* nums, int start, int end)
+void reverse(int* nums, int start, int end) //reverse function
 {
     int temp;
-    while(start<end)
+    while(start<end) //using two pointer approach
     {
-        temp=nums[start];
-        nums[start]=nums[end];
+        //swapping the elements
+        temp=nums[start]; 
+        nums[start]=nums[end]; 
         nums[end]=temp;
+        //incrementing the start and decrementing the end
         start++;
         end--;
     }

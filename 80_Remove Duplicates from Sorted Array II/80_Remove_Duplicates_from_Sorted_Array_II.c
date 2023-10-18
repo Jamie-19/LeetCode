@@ -12,7 +12,7 @@ int removeDuplicates(int* nums, int numsSize);
 int main()
 {
     int nums[100],numsSize,i;
-    printf("Enter the size of array: ");
+    printf("Enter the size of array: "); //taking input from user
     scanf("%d",&numsSize);
     printf("Enter the elements of array: ");
     for(i=0;i<numsSize;i++)
@@ -28,10 +28,12 @@ int removeDuplicates(int* nums, int numsSize)
     int i,j=0;
     for(i=0;i<numsSize;i++)
     {
-        if(i<2 || nums[i]>nums[j-2])
+        if(i<2 || nums[i]>nums[j-2]) //if the index is less than 2 or the element is greater than the element at index j-2 then store the element at index j
+        
         {
-            nums[j++]=nums[i];
+            nums[j++]=nums[i]; //storing the element at index j
         }
+
     }
     return j;
 }
