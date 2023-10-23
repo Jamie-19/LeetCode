@@ -126,3 +126,67 @@ int main() {
     return 0;
 }
 
+/*
+typedef struct {
+    int* arr;       // Array to store elements
+    int size;       // Current size of the array
+    int capacity;   // Maximum capacity of the array
+} RandomizedSet;
+
+// Function to create a new RandomizedSet
+RandomizedSet* randomizedSetCreate() {
+    RandomizedSet* obj = (RandomizedSet*)malloc(sizeof(RandomizedSet));
+    obj->size = 0;
+    obj->capacity = 1000;  // Initial capacity
+    obj->arr = (int*)malloc(obj->capacity * sizeof(int));
+    return obj;
+}
+
+// Function to insert an element into the set
+bool randomizedSetInsert(RandomizedSet* obj, int val) {
+    // Check if the array is full, and if so, double its capacity
+    if (obj->size == obj->capacity) {
+        obj->capacity *= 2;
+        obj->arr = (int*)realloc(obj->arr, obj->capacity * sizeof(int));
+    }
+
+    // Check if the element already exists in the set
+    for (int i = 0; i < obj->size; i++) {
+        if (obj->arr[i] == val) {
+            return false;  // Element already exists
+        }
+    }
+
+    // Add the element to the end of the array and increment the size
+    obj->arr[obj->size] = val;
+    obj->size++;
+    return true;
+}
+
+// Function to remove an element from the set
+bool randomizedSetRemove(RandomizedSet* obj, int val) {
+    for (int i = 0; i < obj->size; i++) {
+        if (obj->arr[i] == val) {
+            // Replace the element with the last element in the array
+            obj->arr[i] = obj->arr[obj->size - 1];
+            obj->size--;
+            return true;  // Element removed
+        }
+    }
+    return false;  // Element not found
+}
+
+// Function to get a random element from the set
+int randomizedSetGetRandom(RandomizedSet* obj) {
+    srand(time(NULL));  // Seed the random number generator (should be called once)
+    int random = rand() % obj->size;  // Generate a random index
+    return obj->arr[random];  // Return the corresponding element
+}
+
+// Function to free the memory used by the set
+void randomizedSetFree(RandomizedSet* obj) {
+    free(obj->arr);
+    free(obj);
+}
+*/
+
