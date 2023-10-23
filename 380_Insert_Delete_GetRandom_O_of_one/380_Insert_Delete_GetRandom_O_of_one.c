@@ -122,7 +122,6 @@ int main() {
                 printf("Invalid choice. Please try again.\n");
         }
     }
-
     randomizedSetFree(obj);
     return 0;
 }
