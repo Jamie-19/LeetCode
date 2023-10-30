@@ -24,7 +24,7 @@ int main()  //main function
         scanf("%d",&nums[i]);
     }
     int k=jump(nums,numsSize);
-    printf("%d",k);
+    printf("\n %d \n",k);
     return 0;
 }
 
